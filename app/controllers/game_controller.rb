@@ -10,4 +10,8 @@ class GameController < ApplicationController
   def paper
     render({ :template => "game_templates/play_paper"})
   end
+
+  def scissors
+    render({ :template => "game_templates/play_scissors"})
+  end
 end
