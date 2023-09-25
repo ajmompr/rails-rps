@@ -6,4 +6,8 @@ class GameController < ApplicationController
   def rock
     render({ :template => "game_templates/play_rock"})
   end
+
+  def paper
+    render({ :template => "game_templates/play_paper"})
+  end
 end
