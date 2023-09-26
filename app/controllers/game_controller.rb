@@ -4,6 +4,17 @@ class GameController < ApplicationController
   end
 
   def rock
+    @rand_moves = ["rock", "paper", "scissors"].sample
+    @comp_move = @rand_moves
+
+    if @comp_move == "rock"
+      @outcome = "tied"
+    elsif @comp_move == "paper"
+      @outcome = "lost"
+    else
+      @outcome = "won"
+    end
+
     render({ :template => "game_templates/play_rock"})
   end
 
